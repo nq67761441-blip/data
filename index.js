@@ -19,7 +19,7 @@ const { WebSocket, createWebSocketStream } = require('ws');
 
 const UUID = '792c9cd6-9ece-4ebc-ff02-86eaf8bf7e73';
 const uuid = UUID.replace(/-/g, "");
-const PORT = process.env.PORT || 10070;
+const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
     let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
     if (!fs.existsSync(filePath)) {
